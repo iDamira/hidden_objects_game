@@ -1,0 +1,43 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: auto;
+  width: 1400px;
+  height: 800px;
+  background-image: url("img/bedroom.jpg");
+  background-size: cover;
+}
+img {
+height: 50px;
+width: 50px;
+}
+
+.row {
+  display: inline-grid;
+  justify-content: center;
+}
+
+.column {
+  display: flex;
+/*  border: 1px solid white;*/
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
+
+.listObjects ul {
+  list-style-type: none;
+}
+
+.listObjects li {
+  display: inline-block;
+  font-size: 2em;
+}
+
+
