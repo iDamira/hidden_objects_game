@@ -30,7 +30,7 @@ main {
   width: 185px;
   height: 100px;
   box-sizing: border-box;
-  border: 1px solid white;
+/*  border: 1px solid white;*/
 }
 
 footer {
