@@ -3,14 +3,13 @@ console.log("JS attached!");
 $(document).ready(function(){
 
 var objectsToHide = ["butterfly_1","window","spider","key","feather","hat","bycicle_2","coffee_cup","mouse","fork"];
-
+var objectsFound = 0;
 $('img').click(function(){
 if($.inArray(this.className, objectsToHide) != -1){
   $(this).slideUp(500);
-  $('li.' + this.className).css('text-decoration',"line-through");
-
+  $('li.' + this.className).css('color', '#A2ADA6', 'text-decoration', "line-through");
+  objectsFound +=1;
 }
-
 });
 
     window.setInterval(function(){
@@ -19,16 +18,30 @@ if($.inArray(this.className, objectsToHide) != -1){
 
         $(".timer").text(timeCount -1);
             if(timeCount<=0){
-
-      $(window.location).attr("href","game_over.html");
-    }
-
+              $(window.location).attr("href","game_over.html");
+        }
+        else if(objectsFound == 10){
+          $(window.location).attr("href","winner.html");
+        }
     },1000);
 
-        $('input').click(function(){
+        $('.startAgain').click(function(){
       $(window.location).attr("href","index.html");
     });
-    // <input class="startAgain" type="submit" value="Start Again">
+          $('.goToMainPage').click(function(){
+      $(window.location).attr("href","start_game.html");
+    });
+                    $('.startTheGame').click(function(){
+      $(window.location).attr("href","index.html");
+    });
+
+                    $('.rules').click(function(){
+                      alert("Use your observing skills to discover the hidden objects in the room. Don't forget, you've got just 30 seconds to find all the objects. Good Luck!");
+
+
+                    });
+
+
 });
 
 // $(document).ready(function(){
