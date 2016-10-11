@@ -26,13 +26,13 @@ if($.inArray(this.className, objectsToHide) != -1){
     },1000);
 
         $('.startAgain').click(function(){
-      $(window.location).attr("href","index.html");
-    });
-          $('.goToMainPage').click(function(){
       $(window.location).attr("href","start_game.html");
     });
-                    $('.startTheGame').click(function(){
+          $('.goToMainPage').click(function(){
       $(window.location).attr("href","index.html");
+    });
+                    $('.startTheGame').click(function(){
+      $(window.location).attr("href","start_game.html");
     });
 
                     $('.rules').click(function(){
