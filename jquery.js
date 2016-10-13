@@ -3,11 +3,14 @@ console.log("JS attached!");
 $(document).ready(function(){
 
 var objectsToHide = ["butterfly_1","window","spider","key","feather","hat","bycicle_2","coffee_cup","mouse","fork"];
+
 var objectsFound = 0;
+
 $('img').click(function(){
+
 if($.inArray(this.className, objectsToHide) != -1){
-  $(this).slideUp(500);
-  $('li.' + this.className).css('color', '#A2ADA6', 'text-decoration', "line-through");
+  $(this).slideToggle(500);
+  $('li.' + this.className).css('color', '#A2ADA6');
   objectsFound +=1;
 }
 });
