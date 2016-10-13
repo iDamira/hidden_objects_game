@@ -3,11 +3,14 @@ console.log("JS attached!");
 $(document).ready(function(){
 
 var objectsToHide = ["butterfly_1","window","spider","key","feather","hat","bycicle_2","coffee_cup","mouse","fork"];
+
 var objectsFound = 0;
+
 $('img').click(function(){
+
 if($.inArray(this.className, objectsToHide) != -1){
-  $(this).slideUp(500);
-  $('li.' + this.className).css('color', '#A2ADA6', 'text-decoration', "line-through");
+  $(this).slideToggle(500);
+  $('li.' + this.className).css('color', '#A2ADA6');
   objectsFound +=1;
 }
 });
@@ -26,13 +29,13 @@ if($.inArray(this.className, objectsToHide) != -1){
     },1000);
 
         $('.startAgain').click(function(){
-      $(window.location).attr("href","index.html");
-    });
-          $('.goToMainPage').click(function(){
       $(window.location).attr("href","start_game.html");
     });
-                    $('.startTheGame').click(function(){
+          $('.goToMainPage').click(function(){
       $(window.location).attr("href","index.html");
+    });
+                    $('.startTheGame').click(function(){
+      $(window.location).attr("href","start_game.html");
     });
 
                     $('.rules').click(function(){

@@ -8,7 +8,7 @@ html, body {
  }
 
 body {
-  background-color: #313676;
+  background-color: rgb(49, 54, 118);
 }
 main {
   display: flex;
@@ -63,19 +63,53 @@ input {
 
 .rules {
   padding: 10px;
-  background-color: pink;
+  background-color: white;
+  color: red;
   border-radius: 10px;
   width: 300px;
   margin: 20px auto;
 }
-
-.hooray a:hover {
+.hooray h1 {
+  color: orange;
+  font-size: 3em;
+}
+.hooray h3:hover {
   color: yellow;
 }
 
-.hello h1 {
-  font-size: 3em;
+.hello {
+  width: 600px;
+  margin: 0 auto;
+  background-color: grey;
+  text-align: center;
+}
+.hello h1, .gameOver h1 {
+  font-size: 2em;
   color: yellow;
+}
+
+.startTheGame {
+  background-color: red;
+  color: white;
+  border: 1px solid white;
+  border-radius: 25px;
+  margin-bottom: 50px;
+}
+.startTheGame:hover {
+  padding: 20px;
+  background-color: orange;
+  color: white;
+  border-radius: 50px;
+}
+
+.startAgain {
+  background-color: red;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.startAgain:hover {
+  background-color: orange;
 }
 /*.score {
   position: absolute;
